@@ -103,33 +103,21 @@ a {
 main {
     display: block;
 }
-section {
-    display: block;
-}
+
 .FirstView {
-    background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+    background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 100px;
     padding-bottom: 28px;
-    position: relative;
-    
     
 }
-
 .FirstView-Container {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 
 }
-.FirstViewContent {
-
-}
-.FirstViewContent_Title {
-
-}
-.FirstViewContent_images {
-
-}
-.FirstView_main-image{
-}
-
-
