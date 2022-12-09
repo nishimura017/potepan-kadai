@@ -1,0 +1,129 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    display: block;
+}
+body {
+    color: #333;
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+
+
+.header {
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    display: block;
+    height: 80px;
+    box-sizing: border-box;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    height: 40px;
+
+}
+.header-logo {
+    display: block;
+    height: 20px;
+    width: auto;
+}
+.HeaderNavList.jsc-Hamburger-List {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 718.6px;
+    box-sizing: border-box;
+
+}
+a {
+    text-decoration: none;
+}
+
+.HeaderNavListItem-Link >span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    word-break: keep-all;
+    
+
+}
+.HeaderNavListItem-Link >span:first-child {
+    font-family: 'Lato',sans-serif;
+    font-size: 14px;
+}
+.HeaderNavListItem-Link >span:last-child {
+    font-size: 10px;
+    align-items: center;
+}
+.HeaderNavListItem {
+    margin-right: 45px;
+}
+.HeaderNavListItem-button {
+    color:#FFFFFF;
+    align-items: center;
+    background-color: #f79214;
+    border: none;
+    border-radius: 38px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 20px;
+    word-break: keep-all;
+    box-sizing: border-box;
+
+    
+
+}
+main {
+    display: block;
+}
+.FirstView {
+    background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 28px;
+    
+}
+
+.FirstView-Container {
+
+}
+.FirstViewContent {
+
+}
+.FirstViewContent_Title {
+
+}
+.FirstViewContent_images {
+
+}
+.FirstView_main-image {
+
+}
