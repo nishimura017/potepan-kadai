@@ -1,84 +1,176 @@
 html {
-    -webkit-text-size-adjust: 100%;
     display: block;
+    
+}
+
+* {
+    word-break: break-all;
+    box-sizing: border-box;
 }
 body {
+    color: #fff;
     color: #333;
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     font-size: 14px;
     font-weight: 500;
-    -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    display: block;
 }
 
-
-
-.header {
+/*ヘッダー*/
+.Header {
     width: 100%;
     position: absolute;
+}
+.Header{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 0;
     display: block;
-    height: 80px;
-    box-sizing: border-box;
 }
-.header-container {
+@media screen and (max-width: 1080px) {
+.Header {
+    background-color: #fff;
+    z-index: 10;
+}}
+@media screen and (max-width: 1080px) {
+.Header--common {
+    position: fixed !important;
+}}
+@media screen and (max-width: 767px) {
+.Header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}}
+.Header-Container {
     display: flex;
     justify-content: space-between;
     margin: 0 36px;
     max-width: 100%;
     position: relative;
-    text-align: center;
-    height: 40px;
-
+    
 }
-.header-logo {
+
+@media screen and (min-width: 768px) {
+.HeaderLogo {
+    transition: opacity .2s;
+}}
+.HeaderLogo__image--pc {
     display: block;
     height: 20px;
     width: auto;
 }
-.HeaderNavList.jsc-Hamburger-List {
+.HeaderLogo__image--sp {
+    display: none;
+    height: 16px;
+    width: auto;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.Header-Container>*:last-child {
+    display: inline-flex;
+}
+.HeaderNavHamburger {
+    display: none;
+}
+
+.HeaderNavList{
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 40px;
-    width: 718.6px;
-    box-sizing: border-box;
+}
 
+@media screen and (max-width: 1080px) {
+.HeaderNavHamburger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+}}
+@media screen and (max-width: 1080px) {
+.HeaderNavHamburger__line:first-child {
+    top: 0;
+}}
+@media screen and (max-width: 1080px) {
+.HeaderNavHamburger__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    transition: top .2s,transform .2s,opacity .3s;
+}}
+@media screen and (max-width: 1080px) {
+.HeaderNavHamburger__line:last-child {
+    top: 100%;}
+}
+@media screen and (max-width: 1080px) {
+.HeaderNavList {
+    overflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    transition: transform .5s;
+    z-index: 99;
+    background-color: rgba(0,0,0,.8);
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}}
+@media screen and (max-width: 767px) {
+.HeaderNavList {
+    top: 52px;
+}}
+@media screen and (min-width: 768px) {
+.HeaderNavListItem {
+    transition: opacity .2s;
+}}
+
+.HeaderNavListItem {
+    margin-right: 45px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.HeaderNavListItem__Link {
+    display: block;
 }
 a {
+    color: #333;
     text-decoration: none;
 }
 
-.HeaderNavListItem-Link >span {
+.HeaderNavListItem__Link>span:first-child {
+    font-family: 'Lato',sans-serif;
+}
+.HeaderNavListItem__Link>span:last-child {
+    font-size: 10px;
+    
+}
+.HeaderNavListItem__Link>span {
     display: block;
     font-weight: 700;
     text-align: center;
     color: #333;
-    word-break: keep-all;
-    
+}
 
-}
-.HeaderNavListItem-Link >span:first-child {
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-}
-.HeaderNavListItem-Link >span:last-child {
-    font-size: 10px;
-    align-items: center;
-}
-.HeaderNavListItem {
-    margin-right: 45px;
-}
 .HeaderNavListItem-button {
-    color:#FFFFFF;
     align-items: center;
     background-color: #f79214;
     border: none;
@@ -88,7 +180,6 @@ a {
     flex-direction: column;
     font-weight: 700;
     justify-content: center;
-    text-decoration: none;
     text-align: center;
     width: 100%;
     font-size: 12px;
@@ -96,11 +187,30 @@ a {
     padding: 0 20px;
     word-break: keep-all;
     box-sizing: border-box;
-
-    
-
 }
+.HeaderNavListItem-button span {
+    color: #ffffff;
+}
+.HeaderNavListItem__button:visited {
+    color: #fff;
+}
+.HeaderNavListItem:last-of-type {
+    margin-right: 0;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+
 main {
+    display: block;
+}
+section {
     display: block;
 }
 
@@ -110,15 +220,31 @@ main {
     background-position: center;
     padding-top: 100px;
     padding-bottom: 28px;
-    width: 1189px;
-    height: 535.578px;
-
-    
 }
-.FirstView_main-image {
-     width: 100% ;
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.FirstView__main-image--sp {
+    display: none;
+}
+.FirstView__main-image {
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+.FirstView {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 35px;
+}}
 
-
+@media screen and (max-width: 767px) {
+.FirstView__main-image--sp {
+    display: block;
+}}
+img {
+    border: 0;
+    vertical-align: middle;
 }
 
 
@@ -132,11 +258,42 @@ main {
     box-sizing: border-box;
 
 }
+/*ファーストビューコンテント*/
 .FirstViewContent {
     margin-bottom: 70px;
     width: fit-content;
 
 }
+@media screen and (max-width: 767px) {
+.FirstView-Container {
+    margin-top: -45vw;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}}
+@media screen and (max-width: 767px) {
+.FirstViewContent {
+    margin-bottom: 20px;
+    width: 100%;
+}}
+@media screen and (max-width: 767px) {
+.FirstViewContent_images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+}}
+@media screen and (max-width: 767px) {
+.FirstViewContent_images img {
+    width: 27.5%;
+}}
+.FirstViewContent_images img:nth-of-type(2) {
+    width: 40%;
+}
+.FirstViewContent_images img:last-of-type {
+    margin-right: 0;
+}
+
 div {
     display: block;
 }
@@ -144,12 +301,11 @@ div {
         display: flex;
     }
     
-    a:-webkit-any-link {
+a:-webkit-any-link {
         color: -webkit-link;
         cursor: pointer;
-        text-decoration: underline;
     }
-    .FirstViewContent__buttons a:visited {
+.FirstViewContent__buttons a:visited {
         color: #fff;
     }
 .FirstViewContent__buttons a {
@@ -195,5 +351,122 @@ div {
     line-height: 54px;
     margin-bottom: 15px;
     text-align: center;
-    margin-top: 0;
 }
+h2, h3, h4, h5, h6, form, select {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 767px) {
+.FirstViewContent_Title {
+    font-size: 25px;
+    line-height: 36px;
+    margin-left: calc(((100vw - 100%)/2)*-1);
+    margin-right: calc(((100vw - 100%)/2)*-1);
+}}
+/*ファーストビューキャプション*/
+
+.FirstViewCaption {
+    color: #a2a2a4;
+    font-size: 12px;
+}
+p {
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+.FirstViewCaption a {
+    color: #a2a2a4;
+}
+
+/*アバウトラッパー*/
+.AboutWrapper {
+    padding: 120px 0;
+    background-color: #f79214;
+    padding: 44px 0;
+}
+.About {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.About__video {
+    width: 50%;
+}
+video {
+    object-fit: contain;
+}
+.About__title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-left: 32px;
+
+}
+.About__title h2 {
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 54px;
+    width: 100%;
+}
+.About__title h2, .About__title p {
+    color: #fff;
+    text-align: left;
+}
+.About__title h2 span {
+    font-weight: 900;
+}
+.About__title h2>span {
+    font-family: 'Lato',sans-serif;
+    font-size: 38px;
+}
+.About__title br {
+    display: none;
+}
+.About__title p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+.About__button>img {
+    margin-right: 5px;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.About__button {
+    color: #fff !important;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+@media screen and (max-width: 1024px) {
+.About {
+    flex-direction: column;
+}}
+@media screen and (max-width: 1024px) {
+.About__video {
+    margin-bottom: 16px;
+    width: 75%;}
+}
+@media screen and (max-width: 1024px) {
+.About__title {
+    margin-left: 0;
+    width: 75%;
+}}
