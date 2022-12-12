@@ -191,16 +191,24 @@ a {
 .HeaderNavListItem-button span {
     color: #ffffff;
 }
-.HeaderNavListItem__button:visited {
+@media screen and (min-width: 768px) {
+.HeaderNavListItem:hover {
+    opacity: .8;
+}}
+@media screen and (min-width: 768px) {
+.HeaderNavListItem-button:hover {
+    opacity: .8;
+}}
+.HeaderNavListItem-button:visited {
     color: #fff;
 }
 .HeaderNavListItem:last-of-type {
     margin-right: 0;
 }
-a {
+/*a {
     color: #333;
     text-decoration: none;
-}
+}*/
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
@@ -210,6 +218,15 @@ a:-webkit-any-link {
 main {
     display: block;
 }
+@media screen and (max-width: 1080px){
+
+main {
+        padding-top: 60px;
+}}
+@media screen and (max-width: 767px) {
+main {
+    padding-top: 52px;
+}}
 section {
     display: block;
 }
@@ -221,10 +238,8 @@ section {
     padding-top: 100px;
     padding-bottom: 28px;
 }
-img {
-    border: 0;
-    vertical-align: middle;
-}
+
+
 .FirstView__main-image--sp {
     display: none;
 }
@@ -242,10 +257,7 @@ img {
 .FirstView__main-image--sp {
     display: block;
 }}
-img {
-    border: 0;
-    vertical-align: middle;
-}
+
 
 
 .FirstView-Container {
@@ -330,6 +342,13 @@ a:-webkit-any-link {
     margin-right: 15px;
     width: 306px;
 }
+@media screen and (min-width: 768px) {
+.FirstViewContent__buttons a:hover {
+    opacity: .8;
+}}
+.FirstViewContent__buttons a:visited {
+    color: #fff;
+}
 
 .FirstViewContent__buttons a:last-of-type {
     background-color: #fff;
@@ -337,6 +356,7 @@ a:-webkit-any-link {
     color: #333;
     width: 176px;
 }
+
 .FirstViewContent_images {
     margin-bottom: 25px;
 }
@@ -444,10 +464,7 @@ video {
 .About__button>img {
     margin-right: 5px;
 }
-img {
-    border: 0;
-    vertical-align: middle;
-}
+
 .About__button {
     color: #fff !important;
     display: flex;
