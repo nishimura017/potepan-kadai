@@ -1,0 +1,27 @@
+body {
+	text-align: center;
+	margin: auto 25% auto 25%;
+}
+
+.stopwatch {
+	font-size: 50px;
+	text-align: center;
+  font-family: monospace;
+}
+
+.buttons {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	height: 50px;
+	width: 100px;
+	font-weight: bold;
+	font-size: large;
+}
+
+.stopbutton {
+	margin: auto 10px auto 10px;
+}
